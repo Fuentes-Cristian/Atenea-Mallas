@@ -1,0 +1,314 @@
+.App {
+  text-align: center;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.cajaLogo{
+  width: 90%;
+  height: 90%;
+  display: flex;
+}
+
+.logo{
+  width: 100px;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cajaTexto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.texto{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 50px;
+  color: #37373788;
+}
+
+@media screen and (max-width: 768px ) {
+  .texto{
+    opacity: 0%;
+  }
+}
+.botonBurger{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+
+.imgCarrito{
+  padding: 5px;
+ 
+}
+@media screen and (max-width: 768px) {
+  .imgCarrito{
+    opacity: 0%;
+  }
+}
+
+.container-fluid{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btnSelect{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.btnSubmit{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 15px; 
+  border-radius: 8px;
+}
+
+.SignosMasMenos{
+  width: 25px;
+  height: 30px;
+  margin: 10px;
+  background-color:#7a7a7a2d;
+  border-radius: 5px;
+}
+
+.form{
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cajaGeneral1{
+  width: 40%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 255, 128, 0.286);
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 764px) {
+  .cajaGeneral1{
+    width: 100%;
+  };
+}
+
+.tituloForm{
+  margin: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.cajaInput1{
+  width:100%;
+  height: 50%;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 764px) {
+  .cajaInput1{
+    width: 100%;
+  };
+}
+
+.input2{
+  border-radius: 1rem;
+  width: 100%;
+  height: 2.5rem;
+  text-align: center;
+  color: #373737cd;
+  background-color: beige;
+}
+
+@media screen and (max-width: 764px) {
+  .input2{
+    width: 100%;
+  };
+}
+
+
+.btnIniciar{
+  margin: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btnSubmit{
+  background-color: beige;
+  color: #373737cd;
+  width: 7rem;
+  height: 2rem;
+  color: black;
+  font-size: large;
+  text-align: center;
+
+}
+
+.botones{
+  width: 1.5rem;
+  border-radius: 7px;
+  margin: 4px;
+}
+
+.Select{
+  width: 4.7rem;
+}
+
+
+/*formulario de compras*/
+
+.formCompras{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.cajaCompras{
+  border: 1px solid black;
+  width: 50%;
+  height: 50vh;
+  text-align: center;
+  padding: 12rem;
+  margin: 9px;
+  border-radius: 7px;
+  background-color: aquamarine;
+}
+
+.tituloCompras{
+  font-style: italic;
+  text-align: center;
+}
+.cajaInputcompras{
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+
+.inputCompras{
+  width: 100%;
+  height:  40px;
+  border-radius: 7px;
+  text-align: center;
+  color: black;
+  font-style: italic;
+  background-color: bisque;
+}
+
+/*itemDetail*/
+
+.h1Titulo{
+  font-style: italic;
+  padding: 10px;
+  color: #373737cd;
+  margin-left: 3rem;
+}
+
+.cajaImgDetail{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3%;
+}
+
+.imgDetail{
+  width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+  .h1Titulo{
+    margin-left: 4.5rem;
+  }
+  .cajaImgDetail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imgDetail{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.cajaDEtailgeneral{
+  width: 100%;
+  height: 100%;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .contadorDetail{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+}
+
+.cajaContador{
+  display: flex;
+  flex-direction: row;
+}
+
+/*CSS carritoItem*/
+
+.divCarritoItem{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 2rem;
+}
+.imgCarritoItem{
+  width: 40%;
+  height: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  .imgCarritoItem{
+    width: 80%;  }
+}
+.divCarritoItem2{
+  width: 50%;
+  height: 50%;
+  text-align: center;
+
+}
+@media screen and (max-width: 768px) {
+  .divCarritoItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+     width: 80%;
+  }
+}
