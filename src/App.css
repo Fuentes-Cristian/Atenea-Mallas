@@ -10,16 +10,28 @@
   pointer-events: none;
 }
 .cajaLogo{
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo{
-  width: 100px;
-  height: 50%;
   display: flex;
   justify-content: flex-start;
+    width: 100%;
+  height: 100%;
+}
+
+.logoAtenea{
+  width: 20%;
+}
+
+@media screen and (max-width:768px) {
+  .logoAtenea{
+    width: 50%;
+  }
 }
 
 .cajaTexto{
@@ -37,11 +49,21 @@
   color: #37373788;
 }
 
-@media screen and (max-width: 768px ) {
-  .texto{
-    opacity: 0%;
-  }
+.cajaBotonLogin{
+  width: 100%;
+  height: auto;
+  margin: 2rem;
+  display: flex;
 }
+.botonLogin{
+  background-color:pink;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: large;
+  width: 5rem;
+border: 0px solid;
+}
+
 .botonBurger{
   display: flex;
   justify-content: flex-end;
@@ -49,17 +71,25 @@
   height: 100%;
 }
 
-
-.imgCarrito{
-  padding: 5px;
- 
+.cajaBotonCarrito{
+ width: 100%;
+ height: auto;
 }
+
+
+.botonCarrito{
+  width: 100%;
+  height: auto;
+  border: 0px solid ;
+}
+
+
 @media screen and (max-width: 768px) {
-  .imgCarrito{
-    opacity: 0%;
+  .cajaBotonCarrito{
+    display: flex;
+    justify-content: flex-end;
   }
 }
-
 .container-fluid{
   width: 100%;
   display: flex;
