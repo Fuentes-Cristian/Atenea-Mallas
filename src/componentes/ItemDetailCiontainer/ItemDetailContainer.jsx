@@ -79,7 +79,7 @@ const ItemDetailContainer = () => {
     const querydb = getFirestore();
     const queryDoc = doc( querydb, 'productos', '390QsCMUUDL80i2DzvHJ');
     getDoc(queryDoc)
-    .then(res => console.log({id: res.id, ...res.Datos }))
+    .then(res => setDatos({id: res.id, ...res.Datos }))
   })
   return (
     <>

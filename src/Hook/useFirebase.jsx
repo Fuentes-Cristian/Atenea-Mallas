@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {db} from '../firebase/Index'
-import { collection,  getDocs } from 'firebase/firestore'
+import { collection,  getDoc} from 'firebase/firestore'
 
 const useFirebase = () => {
 
@@ -10,7 +10,7 @@ const getProductos = async () =>{
     try {
         const itemColl = collection(productos, db)
 
-         await getDocs(itemColl).then((snapshot) =>{
+         await getDoc(itemColl).then((snapshot) =>{
             if (snapshot.size === 0) {
                 console.log("base de datos vacia");
             }
