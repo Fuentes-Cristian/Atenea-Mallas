@@ -33,7 +33,7 @@ function App() {
                               <Route path='/Login' element = {<Login/>} />
                               <Route path='/Carrito' element = {<Carrito/>} />
                               <Route path='*' element = {<Error404/>} />
-                              <Route path='/Item/detail/:id' element = {<ItemDetailContainer/>} />                              
+                              <Route path='/Item/detail/:id' element = {<ItemDetailContainer/>} />   
                        </Routes>
                   </BrowserRouter>
         </CarritoProvider>
