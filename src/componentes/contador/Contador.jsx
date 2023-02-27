@@ -9,12 +9,12 @@ const Contador = ({agregadoAlCarrito}) => {
   //const select = () => setContador(contador === select)
 
   return (
-   <div>
+   <div className='cajaGeneralContador'>
       <button  className='botones' onClick = {() => sumar()}>+</button>
       <h1>{contador}</h1>
       <button className='botones' onClick = {() => restar ()}>-</button>
 
-      <button onClick={() =>{
+      <button className='botonAgregar' onClick={() =>{
 
          agregadoAlCarrito (contador)
 

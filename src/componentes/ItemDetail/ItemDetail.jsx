@@ -14,19 +14,19 @@ const ItemDetail = ({Datos } ) => {
 
 
   return ( 
-    <div className="cajaDEtailgeneral">
-            <h1 className="h1Titulo">{Datos.titulo}</h1>
-            <h2 className="h1Titulo">precio: $ {Datos.precio}</h2>
-      <div className="cajaContador">
-            <Contador agregadoAlCarrito = {agregadoAlCarrito} />
-      </div>
-            
+    <div className="cajaDetailgeneral">
+            <h1 className="h1Titulo" style={{textAlign: "center"}}>{Datos.titulo}</h1>
+            <h2 className="h1Titulo" style={{textAlign: "center"}}>precio: $ {Datos.precio}</h2>
 
-            <div className="cajaImgDetail">
-                  <img className="imgDetail" src={Datos.img} alt="{Datos.titulo}" />
+            <div className="cajaContador">
+                    <Contador agregadoAlCarrito = {agregadoAlCarrito} />
             </div>
-         
-    
+     
+            <div className="cajaImgDetail">
+              <div className="cajaImg">
+                  <img className="imgDetail" src={Datos.img} alt="{Datos.titulo}" />
+              </div>
+            </div>    
     </div>
   )
 }

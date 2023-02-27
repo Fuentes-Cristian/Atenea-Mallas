@@ -198,10 +198,34 @@ border: 0px solid;
 
 }
 
+.cajaGeneralContador{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+}
+
+@media screen and (max-width: 768px) {
+  .cajaGeneralContador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .botones{
-  width: 1.5rem;
+  width: 3rem;
   border-radius: 7px;
   margin: 4px;
+  background-color: pink;
+}
+
+.botonAgregar{
+  width: 6rem;
+  border-radius: 7px;
+  height: auto;
+  margin: 4px ;
+  background-color: pink;
 }
 
 .Select{
@@ -263,10 +287,21 @@ border: 0px solid;
 .cajaImgDetail{
   width: 100%;
   height: 100%;
+}
+
+.cajaImg{
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  padding: 3%;
+  width: 100%;
+  height: auto;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .cajaImg{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .imgDetail{
@@ -307,7 +342,7 @@ border: 0px solid;
 
 .cajaContador{
   display: flex;
-  flex-direction: row;
+  width: 100%;
 }
 
 /*CSS carritoItem*/
