@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react' 
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
-import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 
-/*const objet = [
+const objet = [
   {
     img: "https://i.pinimg.com/564x/1d/44/2c/1d442c925ea06152466242d82f7e7803.jpg",
     titulo: "Kassie",
@@ -65,21 +64,27 @@ import { doc, getDoc, getFirestore } from 'firebase/firestore';
     precio: 2500,
     id: "10"
   }
-]*/
+]
 
 
 const ItemDetailContainer = () => {
   
 
-  const [Datos, setDatos] = useState({});
+  const [Datos, guardaDatos] = useState({});
   const { id } = useParams()
-  //console.log("id: ",id)
+
   useEffect(() => {
 
-    const querydb = getFirestore();
-    const queryDoc = doc( querydb, 'productos', '390QsCMUUDL80i2DzvHJ');
-    getDoc(queryDoc)
-    .then(res => setDatos({id: res.id, ...res.Datos }))
+    const getData = new Promise(resolve => {
+      setTimeout(() => {
+        resolve(objet)
+      }, 1000)
+    })
+
+    getData.then(res => {
+      guardaDatos(res.find(p => p.id === id))
+    }, [])
+
   })
   return (
     <>

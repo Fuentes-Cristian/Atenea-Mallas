@@ -4,15 +4,15 @@ import Login from './componentes/Login/Login.jsx';
 import Carrito from './componentes/carrito/Carrito';
 import Error404 from './componentes/404/Error404';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import { BrowserRouter as Router,Routes,  Route, BrowserRouter, } from 'react-router-dom'
+import { BrowserRouter as Router, Routes,  Route, BrowserRouter } from 'react-router-dom'
 import ItemDetailContainer from './componentes/ItemDetailCiontainer/ItemDetailContainer';
 import CarritoProvider from './context/CarritoContext';
-import { useEffect } from 'react';
-import useFirebase from './Hook/useFirebase';
+//import { useEffect } from 'react';
+//import useFirebase from './Hook/useFirebase';
 
 function App() { 
 
-  const {productos, getProductos } = useFirebase()
+ /* const {productos, getProductos } = useFirebase()
 
   useEffect(() =>{
     getProductos()
@@ -20,7 +20,9 @@ function App() {
     return () =>{
 
     }
-  }, [productos])
+  }, [productos])/*/
+
+  
 
 
   return (
@@ -42,4 +44,4 @@ function App() {
     
 }
  
-export default App; 
+export default App;  

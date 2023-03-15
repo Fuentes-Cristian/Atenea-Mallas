@@ -5,8 +5,7 @@ import { getProducts } from '../../mock/Data';
 const ItemListContainer = () => {
 
   const [listaProductos, setListaProductos] = useState([]);
- 
-
+  
   useEffect(() => {
     getProducts()
       .then((res) => setListaProductos(res))
@@ -14,10 +13,9 @@ const ItemListContainer = () => {
   }, []);
 
   return (
-    <div>
-
+    <>
        <ItemList listaProductos={listaProductos} />
-    </div>
+    </>
  );
 };
 
