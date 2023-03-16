@@ -9,6 +9,8 @@ const ItemDetail = ({Datos } ) => {
 
   const agregadoAlCarrito =  (contador) => {
     agregado (  contador, Datos )
+
+    console.log('compraste ' + {contador} + ' unidades ');
   }
 
 
@@ -19,7 +21,7 @@ const ItemDetail = ({Datos } ) => {
             <h2 className="h1Titulo" style={{textAlign: "center"}}>precio: $ {Datos.precio}</h2>
 
             <div className="cajaContador">
-                    <Contador agregadoAlCarrito = {agregadoAlCarrito} />
+                    <Contador agregadoAlCarrito = {agregadoAlCarrito} inicio = {0} stock = {5} />
             </div>
      
             <div className="cajaImgDetail">

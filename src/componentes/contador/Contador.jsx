@@ -1,9 +1,8 @@
- import {useState} from 'react'
+ import {useState, useEffect} from 'react'
  
-const Contador = ({agregadoAlCarrito}) => {
+const Contador = ({agregadoAlCarrito, inicio, stock}) => {
 
-  const stock = 5
-  const [contador, setContador]= useState(0);
+  const [contador, setContador]= useState(parseInt(inicio));
   const sumar = () =>{
    setContador(contador + 1)
   }
@@ -12,9 +11,11 @@ const Contador = ({agregadoAlCarrito}) => {
    setContador(contador - 1)
   }
 
-  const enElCarro = (contador) =>{
-   console.log('compraste' +{contador} + 'unidades');
- }
+  useEffect(() =>{
+   setContador(parseInt (inicio))
+  }, [inicio])
+
+ 
 
   return (
    <div className='cajaGeneralContador'>
@@ -23,7 +24,6 @@ const Contador = ({agregadoAlCarrito}) => {
       <button className='botones' disabled={contador <= 1} onClick = {() => restar ()}>-</button>
 
       <button className='botonAgregar' disabled={stock <=0}  onClick={() =>{
-         enElCarro(contador)
          agregadoAlCarrito (contador)
 
       } }> agregar </button>
