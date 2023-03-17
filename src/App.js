@@ -12,19 +12,6 @@ import CarritoProvider from './context/CarritoContext';
 
 function App() { 
 
- /* const {productos, getProductos } = useFirebase()
-
-  useEffect(() =>{
-    getProductos()
-
-    return () =>{
-
-    }
-  }, [productos])/*/
-
-  
-
-
   return (
 
         <CarritoProvider>

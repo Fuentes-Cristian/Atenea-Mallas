@@ -15,7 +15,7 @@ const Navbar = () => {
               
               <div className='cajaLogo'>
                 <div className='logo'>
-                     <a className="navbar-brand" href="/"><img className='logoAtenea' src='../img/logo.png' /></a>
+                     <NavLink className="navbar-brand" to='/'><img className='logoAtenea' src='../img/logo.png' alt='Logo de la pagina' /></NavLink>
                 </div>
                  
                  <button className="navbar-toggler botonBurger" type="button" data-bs-toggle="collapse"             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
