@@ -22,8 +22,7 @@ const Carrito = () => {
                 precio={item.precio}
                 img={item.img}
             />
-        ))}
-        ;
+        ))};
     </div>
 );
 

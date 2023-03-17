@@ -377,3 +377,23 @@ border: 0px solid;
      width: 80%;
   }
 }
+
+.cajaLinkDetalle{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .cajaLinkDetalle{
+    justify-content: center;
+    align-items: center;
+  }
+}
+.linkCompraDetalle{
+  width: 10rem;
+  height: 2.3rem;
+  background-color: pink;
+  border-radius: 7px;
+}
