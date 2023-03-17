@@ -6,7 +6,12 @@ const CarritoProvider = ({children}) => {
 
   const [carrito, setCarrito] = useState([])
 
- const enElCarro = (id) => carrito.find(Item => Item.id === id)
+  
+  const borrarItem = (id) =>{setCarrito(carrito.filter((itemCarrito) => itemCarrito.id !== id))}
+  
+  const vaciarCarro = () =>{ setCarrito([])}
+  
+  const enElCarro = (id) => carrito.find(Item => Item.id === id) ? true : false;
 
  const agregado = (contador, Datos) => {
   if (enElCarro(Datos.id)) {
@@ -22,15 +27,7 @@ const CarritoProvider = ({children}) => {
        } 
     };
 
- const vaciarCarro = (ItemId) =>{
- // const removeItem = carrito.find((carritoItem) => carritoItem.Item.id === ItemId)
-  setCarrito([])
- }
 
- const borrarItem = (idBorrar) =>{
-  let nuevoItem = carrito.filter((itemCarrito) => itemCarrito.id !== idBorrar)
-  setCarrito(nuevoItem)
- }
 
  const totalPrecio = () =>{
   return carrito.reduce((prev, act) => prev + act.contador * act.precio, 0)
@@ -40,10 +37,15 @@ const CarritoProvider = ({children}) => {
     setCarrito([...carrito, Item])
   }
   
-  const Borrar = () => setCarrito([]);
-
   return (
-    <CarritoContext.Provider value = {{carrito, setCarrito, agregado, vaciarCarro, borrarItem, totalPrecio, guardarCarrito, Borrar}}>
+    <CarritoContext.Provider value = {{
+      carrito, 
+      setCarrito, 
+      agregado, 
+      vaciarCarro, 
+      borrarItem,
+       totalPrecio, 
+       guardarCarrito}}>
       {children}
     </CarritoContext.Provider>
   ) 

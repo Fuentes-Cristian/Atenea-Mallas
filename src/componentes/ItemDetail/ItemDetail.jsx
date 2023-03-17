@@ -1,21 +1,17 @@
 import { useContext } from "react"
 import { CarritoContext } from "../../context/CarritoContext"
 import Contador from "../contador/Contador"
-import { useState } from "react"
 
 
 const ItemDetail = ({Datos } ) => {
 
   const {agregado} = useContext(CarritoContext);
 
-  const [enElCarrito, setEnElCarrito] = useState(false);
+  const agregadoAlCarrito =  (cantidad) => {
+    agregado (  cantidad, Datos )
 
-  const agregadoAlCarrito =  (contador) => {
-    agregado (  contador, Datos )
 
-    setEnElCarrito(true)
-
-    console.log('compraste ' + {contador} + ' unidades ');
+    console.log('compraste ' + {cantidad} + ' unidades ');
   }
 
   return ( 
@@ -24,11 +20,7 @@ const ItemDetail = ({Datos } ) => {
             <h2 className="h1Titulo" style={{textAlign: "center"}}>precio: $ {Datos.precio}</h2>
 
             <div className="cajaContador">
-                  {
-                    enElCarrito
-                    ? <link to={'/Carrito'}> terminar compra</link>
-                    :   <Contador agregadoAlCarrito = {agregadoAlCarrito} inicio = {0} stock = {5} />
-                  }
+                    <Contador agregadoAlCarrito = {agregadoAlCarrito} inicio = {0} stock = {5} />
             </div>
      
             <div className="cajaImgDetail">
