@@ -397,3 +397,51 @@ border: 0px solid;
   background-color: pink;
   border-radius: 7px;
 }
+
+.textCarrito{
+  display: flex;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .textCarrito{
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
+
+.textoCarrito{
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  width: 90%;
+  text-align: center;
+}
+
+.btnCarritoLink{
+  width: 10rem;
+  background-color: pink;
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  border-radius: 7px;
+  margin: 1rem;
+}
+
+.cajaPrecio{
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .cajaPrecio{
+    justify-content: center;
+  } 
+}
+
+.precio{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 3rem;
+}
