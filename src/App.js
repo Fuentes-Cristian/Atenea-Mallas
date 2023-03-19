@@ -7,8 +7,8 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import { BrowserRouter as Router, Routes,  Route, BrowserRouter } from 'react-router-dom'
 import ItemDetailContainer from './componentes/ItemDetailCiontainer/ItemDetailContainer';
 import CarritoProvider from './context/CarritoContext';
-//import { useEffect } from 'react';
-//import useFirebase from './Hook/useFirebase';
+import './firebase/Index'
+
 
 function App() { 
 

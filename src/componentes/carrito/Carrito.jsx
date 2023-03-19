@@ -8,6 +8,16 @@ const Carrito = () => {
 
   const {carrito, totalPrecio}  = useContext (CarritoContext);
 
+  const orden = {
+    persona : {
+        email: "cristian@gmail.com",
+        password: "123123"
+
+    },
+    items: Carrito,
+    total: totalPrecio(),
+}
+
 
   return carrito.length === 0 ? (
     <div className='textCarrito'>
@@ -19,8 +29,12 @@ const Carrito = () => {
     <div>
 
 <div className='cajaPrecio'>
-          <p className='precio'>Total:  ${totalPrecio()} </p>
+          <div className="btnCompraCaja">
+              <p className='precio'>Total:  ${totalPrecio()} </p>
+              <button className="btnCompra">Realizar compra</button>
+          </div>
         </div>
+
         {carrito.map((item) => (
             <CarritoItem
                 key={item.id}
@@ -29,6 +43,7 @@ const Carrito = () => {
                 img={item.img}
             />
         ))};
+
     </div>
 );
 

@@ -14,7 +14,7 @@ const getProductos = async () =>{
             if (snapshot.size === 0) {
                 console.log("base de datos vacia");
             }
-            setProductos(snapshot.docs.map((doc) => ({id:doc.id, ...doc.data})))
+            setProductoss(snapshot.docs.map((doc) => ({id:doc.id, ...doc.data()})))
         })
     } catch (error) {
         

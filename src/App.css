@@ -445,3 +445,27 @@ border: 0px solid;
   font-style: italic;
   font-size: 3rem;
 }
+
+.btnEliminar{
+  background-color: pink;
+  border-radius: 7px;
+  width: 100px;
+  font-size: large;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.btnCompraCaja{
+  display: flex;
+  justify-content: center;
+}
+
+.btnCompra{
+  background-color: pink;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  font-style: italic;
+  border-radius: 7px;
+  width: 100px;
+  margin: 1rem;
+}
