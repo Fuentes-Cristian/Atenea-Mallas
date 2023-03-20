@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import { CarritoContext } from "../../context/CarritoContext";
-import Carrito from "../carrito/Carrito";
 
 
 const CarritoItem = ({ id, titulo, precio, img , itemCarrito}) => {
 
-    const {borrarItem, totalprecio} = useContext(CarritoContext)
+    const {borrarItem} = useContext(CarritoContext)
     
 
    

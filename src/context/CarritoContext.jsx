@@ -6,7 +6,6 @@ const CarritoProvider = ({children}) => {
 
   const [carrito, setCarrito] = useState([])
 
-  
   const borrarItem = (id) =>{setCarrito(carrito.filter((itemCarrito) => itemCarrito.id !== id))}
   
   const vaciarCarro = () =>{ setCarrito([])}
