@@ -13,11 +13,11 @@ const getProductos = async () =>{
          await getDoc(itemColl).then((snapshot) =>{
             if (snapshot.size === 0) {
                 console.log("base de datos vacia");
-            }
-            setProductoss(snapshot.docs.map((doc) => ({id:doc.id, ...doc.data()})))
+            }else
+            setProductos(snapshot.docs.map((doc) => ({id:doc.id, ...doc.data()})))
         })
     } catch (error) {
-        
+        console.log("error al guardar")
     }
 }
 

@@ -27,7 +27,7 @@ const ItemDetail = ({Datos } ) => {
                       prodCarrito
                       ?
                       <div className="cajaLinkDetalle">
-                        <button className='linkCompraDetalle'><Link to={'/Checkout'}>terminar compra</Link></button>
+                        <button className='linkCompraDetalle'><Link to={'/carrito'}>Ir al carrito</Link></button>
                       </div>
 
                       :<Contador agregadoAlCarrito = {agregadoAlCarrito} inicio = {0} stock = {5} />
