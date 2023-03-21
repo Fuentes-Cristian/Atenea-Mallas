@@ -30,7 +30,7 @@ const ItemDetail = ({Datos } ) => {
                         <button className='linkCompraDetalle'><Link to={'/carrito'}>Ir al carrito</Link></button>
                       </div>
 
-                      :<Contador agregadoAlCarrito = {agregadoAlCarrito} inicio = {0} stock = {5} />
+                      :<Contador agregadoAlCarrito = {agregadoAlCarrito} inicio = {0} stock = {10} />
                     }
             </div>
      

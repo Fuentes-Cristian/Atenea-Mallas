@@ -2,8 +2,6 @@ import React, { useContext } from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
 import CarritoItem from '../CarritoItem/CarritoItem';
 import { Link } from 'react-router-dom';
-import { db, guardarDoc } from '../../firebase/Index';
-import { collection} from 'firebase/firestore';
 
 
 const Carrito = () => {
@@ -19,7 +17,7 @@ const Carrito = () => {
     items: Carrito,
     total: totalPrecio(),
 }
-
+/*
 const enviarCompra = () =>{
    // console.log("hola");
    const ordenColeccion = collection(db, 'ordenes');
@@ -27,7 +25,7 @@ const enviarCompra = () =>{
    .then(( {id}) =>console.log(id))
 
 
-}
+}*/
 
 
   return carrito.length === 0 ? (
@@ -42,7 +40,7 @@ const enviarCompra = () =>{
 <div className='cajaPrecio'>
           <div className="btnCompraCaja">
               <p className='precio'>Total:  ${totalPrecio()} </p>
-              <button className="btnCompra" onClick={enviarCompra()}>Finalizar compra</button>
+              <button className="btnCompra" onClick={''}>Finalizar compra</button>
           </div>
         </div>
 
