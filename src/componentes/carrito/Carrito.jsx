@@ -40,7 +40,7 @@ const enviarCompra = () =>{
 <div className='cajaPrecio'>
           <div className="btnCompraCaja">
               <p className='precio'>Total:  ${totalPrecio()} </p>
-              <button className="btnCompra" onClick={enviarCompra}>Finalizar compra</button>
+              <button className="btnCompra" onClick={enviarCompra}><Link to={'/checkout'}>Finalizar compra</Link></button>
           </div>
         </div>
 
