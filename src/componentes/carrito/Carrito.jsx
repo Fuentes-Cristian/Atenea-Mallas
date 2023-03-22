@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
 import CarritoItem from '../CarritoItem/CarritoItem';
 import { Link } from 'react-router-dom';
-
+import { addDoc, collection, getFirestore } from 'firebase/firestore';
 
 const Carrito = () => {
 
@@ -14,19 +14,19 @@ const Carrito = () => {
         password: "123123"
 
     },
-    items: Carrito,
+    items: carrito,
     total: totalPrecio(),
 }
-/*
+
 const enviarCompra = () =>{
-   // console.log("hola");
-   const ordenColeccion = collection(db, 'ordenes');
-   guardarDoc(ordenColeccion, orden)
-   .then(( {id}) =>console.log(id))
+  //console.log("hola");
+  const dataBase = getFirestore()
+  const ordenColeccion = collection(dataBase, 'ordenes');
+  addDoc(ordenColeccion, orden)
+  .then(({id}) =>console.log(id))
 
 
-}*/
-
+}
 
   return carrito.length === 0 ? (
     <div className='textCarrito'>
@@ -40,7 +40,7 @@ const enviarCompra = () =>{
 <div className='cajaPrecio'>
           <div className="btnCompraCaja">
               <p className='precio'>Total:  ${totalPrecio()} </p>
-              <button className="btnCompra" onClick={''}>Finalizar compra</button>
+              <button className="btnCompra" onClick={enviarCompra}>Finalizar compra</button>
           </div>
         </div>
 
